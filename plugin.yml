@@ -1,0 +1,4 @@
+﻿name: LibNames
+main: com.fyxridd.lib.names.NamesPlugin
+version: 0.1.0
+depend: [LibCore, LibConfig]
