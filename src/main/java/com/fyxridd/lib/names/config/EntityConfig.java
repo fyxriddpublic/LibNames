@@ -1,4 +1,4 @@
-package com.fyxridd.lib.names.enchant;
+package com.fyxridd.lib.names.config;
 
 import com.fyxridd.lib.config.api.basic.Config;
 import com.fyxridd.lib.config.api.basic.ListType;
@@ -9,29 +9,29 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@Config("names/world.yml")
-public class WorldConfig {
-    private class WorldConverter implements ListConvert.ListConverter<Map<String, String>> {
+@Config("names/entity.yml")
+public class EntityConfig {
+    private class EntityConverter implements ListConvert.ListConverter<Map<String, String>> {
         @Override
         public Map<String, String> convert(String plugin, List list) {
-            Map<String, String> worlds = new HashMap<>();
+            Map<String, String> entitys = new HashMap<>();
             for (Object o:list) {
                 String s = (String) o;
                 String[] ss = s.split(" ", 2);
                 String name = ss[0];
                 String show = ss[1];
-                worlds.put(name, show);
+                entitys.put(name, show);
             }
-            return worlds;
+            return entitys;
         }
     }
 
-    @Path("world")
-    @ListConvert(WorldConverter.class)
+    @Path("entity")
+    @ListConvert(EntityConverter.class)
     @ListType(ListType.Type.String)
-    private Map<String, String> worlds;
+    private Map<String, String> entitys;
 
-    public Map<String, String> getWorlds() {
-        return worlds;
+    public Map<String, String> getEntitys() {
+        return entitys;
     }
 }

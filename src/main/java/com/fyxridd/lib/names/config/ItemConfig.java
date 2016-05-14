@@ -1,4 +1,4 @@
-package com.fyxridd.lib.names.enchant;
+package com.fyxridd.lib.names.config;
 
 import com.fyxridd.lib.config.api.basic.Config;
 import com.fyxridd.lib.config.api.basic.ListType;
