@@ -9,12 +9,11 @@ import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
-import org.bukkit.event.Listener;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.potion.PotionEffectType;
 
-public class NamesManager implements Listener{
+public class NamesManager{
 	private EnchantConfig enchantConfig;
     private EntityConfig entityConfig;
     private ItemConfig itemConfig;
