@@ -27,8 +27,7 @@ public class WorldConfig {
     }
 
     @Path("world")
-    @ListConvert(WorldConverter.class)
-    @ListType(ListType.Type.String)
+    @ListConvert(value = WorldConverter.class, listType = ListType.String)
     private Map<String, String> worlds;
 
     public Map<String, String> getWorlds() {

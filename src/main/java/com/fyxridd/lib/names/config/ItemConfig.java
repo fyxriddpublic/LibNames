@@ -28,8 +28,7 @@ public class ItemConfig {
     }
 
     @Path("item")
-    @ListConvert(ItemConverter.class)
-    @ListType(ListType.Type.String)
+    @ListConvert(value = ItemConverter.class, listType = ListType.String)
     private Map<String, String> items;
 
     public Map<String, String> getItems() {

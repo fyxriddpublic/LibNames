@@ -27,8 +27,7 @@ public class PotionConfig {
     }
 
     @Path("potion")
-    @ListConvert(PotionConverter.class)
-    @ListType(ListType.Type.String)
+    @ListConvert(value = PotionConverter.class, listType = ListType.String)
     private Map<Integer, String> potions;
 
     public Map<Integer, String> getPotions() {

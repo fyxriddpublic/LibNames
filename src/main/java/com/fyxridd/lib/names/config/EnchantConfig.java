@@ -1,6 +1,7 @@
 package com.fyxridd.lib.names.config;
 
 import com.fyxridd.lib.config.api.basic.Config;
+import com.fyxridd.lib.config.api.basic.ListHelper;
 import com.fyxridd.lib.config.api.basic.ListType;
 import com.fyxridd.lib.config.api.basic.Path;
 import com.fyxridd.lib.config.api.convert.ListConvert;
@@ -27,8 +28,7 @@ public class EnchantConfig {
     }
 
     @Path("enchant")
-    @ListConvert(EnchantsConverter.class)
-    @ListType(ListType.Type.String)
+    @ListConvert(value = EnchantsConverter.class, listType = ListType.String)
     private Map<Integer, String> enchants;
 
     public Map<Integer, String> getEnchants() {

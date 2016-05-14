@@ -1,6 +1,7 @@
 package com.fyxridd.lib.names.config;
 
 import com.fyxridd.lib.config.api.basic.Config;
+import com.fyxridd.lib.config.api.basic.ListHelper;
 import com.fyxridd.lib.config.api.basic.ListType;
 import com.fyxridd.lib.config.api.basic.Path;
 import com.fyxridd.lib.config.api.convert.ListConvert;
@@ -27,8 +28,7 @@ public class EntityConfig {
     }
 
     @Path("entity")
-    @ListConvert(EntityConverter.class)
-    @ListType(ListType.Type.String)
+    @ListConvert(value = EntityConverter.class, listType = ListType.String)
     private Map<String, String> entitys;
 
     public Map<String, String> getEntitys() {
