@@ -1,7 +1,7 @@
 package com.fyxridd.lib.names.manager;
 
-import com.fyxridd.lib.config.api.ConfigApi;
-import com.fyxridd.lib.config.manager.ConfigManager;
+import com.fyxridd.lib.core.api.config.ConfigApi;
+import com.fyxridd.lib.core.config.ConfigManager;
 import com.fyxridd.lib.names.NamesPlugin;
 import com.fyxridd.lib.names.config.*;
 import org.bukkit.enchantments.Enchantment;
