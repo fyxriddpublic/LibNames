@@ -1,7 +1,7 @@
 package com.fyxridd.lib.names.manager;
 
 import com.fyxridd.lib.core.api.config.ConfigApi;
-import com.fyxridd.lib.core.config.ConfigManager;
+import com.fyxridd.lib.core.api.config.Setter;
 import com.fyxridd.lib.names.NamesPlugin;
 import com.fyxridd.lib.names.config.*;
 import org.bukkit.enchantments.Enchantment;
@@ -29,31 +29,31 @@ public class NamesManager{
         ConfigApi.register(NamesPlugin.instance.pn, WorldConfig.class);
 
         //添加配置监听
-        ConfigApi.addListener(NamesPlugin.instance.pn, EnchantConfig.class, new ConfigManager.Setter<EnchantConfig>() {
+        ConfigApi.addListener(NamesPlugin.instance.pn, EnchantConfig.class, new Setter<EnchantConfig>() {
             @Override
             public void set(EnchantConfig value) {
                 enchantConfig = value;
             }
         });
-        ConfigApi.addListener(NamesPlugin.instance.pn, EntityConfig.class, new ConfigManager.Setter<EntityConfig>() {
+        ConfigApi.addListener(NamesPlugin.instance.pn, EntityConfig.class, new Setter<EntityConfig>() {
             @Override
             public void set(EntityConfig value) {
                 entityConfig = value;
             }
         });
-        ConfigApi.addListener(NamesPlugin.instance.pn, ItemConfig.class, new ConfigManager.Setter<ItemConfig>() {
+        ConfigApi.addListener(NamesPlugin.instance.pn, ItemConfig.class, new Setter<ItemConfig>() {
             @Override
             public void set(ItemConfig value) {
                 itemConfig = value;
             }
         });
-        ConfigApi.addListener(NamesPlugin.instance.pn, PotionConfig.class, new ConfigManager.Setter<PotionConfig>() {
+        ConfigApi.addListener(NamesPlugin.instance.pn, PotionConfig.class, new Setter<PotionConfig>() {
             @Override
             public void set(PotionConfig value) {
                 potionConfig = value;
             }
         });
-        ConfigApi.addListener(NamesPlugin.instance.pn, WorldConfig.class, new ConfigManager.Setter<WorldConfig>() {
+        ConfigApi.addListener(NamesPlugin.instance.pn, WorldConfig.class, new Setter<WorldConfig>() {
             @Override
             public void set(WorldConfig value) {
                 worldConfig = value;
