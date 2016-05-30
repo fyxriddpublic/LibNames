@@ -11,7 +11,7 @@ import java.util.Map;
 
 @Config("names/entity.yml")
 public class EntityConfig {
-    private class EntityConverter implements ListConvert.ListConverter<Map<String, String>> {
+    private static class EntityConverter implements ListConvert.ListConverter<Map<String, String>> {
         @Override
         public Map<String, String> convert(String plugin, List list) {
             Map<String, String> entitys = new HashMap<>();

@@ -11,7 +11,7 @@ import java.util.Map;
 
 @Config("names/item.yml")
 public class ItemConfig {
-    private class ItemConverter implements ListConvert.ListConverter<Map<String, String>> {
+    private static class ItemConverter implements ListConvert.ListConverter<Map<String, String>> {
         @Override
         public Map<String, String> convert(String plugin, List list) {
             Map<String, String> items = new HashMap<>();

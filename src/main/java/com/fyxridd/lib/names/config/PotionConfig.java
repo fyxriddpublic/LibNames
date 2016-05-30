@@ -11,7 +11,7 @@ import java.util.Map;
 
 @Config("names/potion.yml")
 public class PotionConfig {
-    private class PotionConverter implements ListConvert.ListConverter<Map<Integer, String>> {
+    private static class PotionConverter implements ListConvert.ListConverter<Map<Integer, String>> {
         @Override
         public Map<Integer, String> convert(String plugin, List list) {
             Map<Integer, String> potions = new HashMap<>();

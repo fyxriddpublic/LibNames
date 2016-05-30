@@ -11,7 +11,7 @@ import java.util.Map;
 
 @Config("names/world.yml")
 public class WorldConfig {
-    private class WorldConverter implements ListConvert.ListConverter<Map<String, String>> {
+    private static class WorldConverter implements ListConvert.ListConverter<Map<String, String>> {
         @Override
         public Map<String, String> convert(String plugin, List list) {
             Map<String, String> worlds = new HashMap<>();
