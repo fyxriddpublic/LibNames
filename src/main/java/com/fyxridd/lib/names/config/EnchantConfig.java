@@ -1,10 +1,9 @@
 package com.fyxridd.lib.names.config;
 
-import com.fyxridd.lib.config.api.basic.Config;
-import com.fyxridd.lib.config.api.basic.ListHelper;
-import com.fyxridd.lib.config.api.basic.ListType;
-import com.fyxridd.lib.config.api.basic.Path;
-import com.fyxridd.lib.config.api.convert.ListConvert;
+import com.fyxridd.lib.core.api.config.basic.Config;
+import com.fyxridd.lib.core.api.config.basic.ListType;
+import com.fyxridd.lib.core.api.config.basic.Path;
+import com.fyxridd.lib.core.api.config.convert.ListConvert;
 
 import java.util.HashMap;
 import java.util.List;
@@ -12,7 +11,7 @@ import java.util.Map;
 
 @Config("names/enchant.yml")
 public class EnchantConfig {
-    private class EnchantsConverter implements ListConvert.ListConverter<Map<Integer, String>> {
+    private static class EnchantsConverter implements ListConvert.ListConverter<Map<Integer, String>> {
         @Override
         public Map<Integer, String> convert(String plugin, List list) {
             Map<Integer, String> enchants = new HashMap<>();
